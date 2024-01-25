@@ -5,6 +5,7 @@
          2.private
          3.protected */
       public $name;
+      const EDITION = 5;
       protected $author;
       private $price;
 
@@ -43,6 +44,7 @@
     }
      //We can create the n number of objects using new keyword
      $obj = new Book("Fire","Jennings",200); //Instantitaion
+     echo Book::EDITION;
 
      echo "Book price is {$obj->getPrice()}"."<br>";
      $obj->setAuthor("Kingsley")."<br>";;
@@ -77,7 +79,7 @@
 
      # ABSTRACTION
      // Parent class
-  abstract class Car {
+   abstract class Car {
     public $name;
     public function __construct($name) {
       $this->name = $name;
