@@ -6,9 +6,9 @@
      2.throws
      3. custom exception
     */ 
-   function checkAge($age)
+   function checkAge($ages)
    {
-      if($age<18)
+      if($ages<18)
       {
          throw new Exception ("You are not eligible for voting");
       }
