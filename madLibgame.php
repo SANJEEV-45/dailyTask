@@ -16,16 +16,15 @@
     _______ are blue.<br>
     I Love _______.<br>
     <?php
-        if(isset($_POST["submit"]))
-        {
-            $color=$_POST["Color"];
-            $noun=$_POST["noun"];
-            $celebrity=$_POST["celebrity"];
-            echo "Roses are $color"."<br>";
-            echo "$noun are blue"."<br>";
-            echo "I love $celebrity";
-        }
+if (isset($_POST["submit"])) {
+    $color = $_POST["Color"];
+    $noun = $_POST["noun"];
+    $celebrity = $_POST["celebrity"];
+    echo "Roses are $color" . "<br>";
+    echo "$noun are blue" . "<br>";
+    echo "I love $celebrity";
+}
 
-    ?>
+?>
 </body>
 </html>

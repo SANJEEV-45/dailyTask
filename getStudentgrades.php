@@ -14,9 +14,8 @@
 </body>
 </html>
 <?php
-        $Students= array("rohit"=>45,"virat"=>18, "dhawan"=>25,"rahane"=>17);
-        if(isset($_POST["submit"]))
-        {
-            echo $Students[$_POST["Student"]];
-        }
-  ?>
+$Students = array("rohit" => 45, "virat" => 18, "dhawan" => 25, "rahane" => 17);
+if (isset($_POST["submit"])) {
+    echo $Students[$_POST["Student"]];
+}
+?>
