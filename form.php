@@ -9,37 +9,34 @@
 </head>
 
 <body>
-    <form method="post" action="<?=$_SERVER['PHP_SELF'];?>">
+    <form method="POST" action="form">
         <label for="Email">email:</label>
-        <input type="text" name="email" id="Email" >
+        <input type="text" name="email" id="Email" required>
         <br><br>
         <label for="pwd">password:</label>
-        <input type="text" name="password" id="pwd" >
+        <input type="text" name="password" id="pwd" required>
 
-        <button name="submit">Submit</button>
+        <input type="submit" value="Submit" name='submit' />
     </form>
 
 </body>
+
 </html>
 
 
 <?php
-// include '/var/www/html/UI/form.html';
-    if(isset($_POST['submit'])){
-        $emailPattern = '/^([a-z\d\.-]{1,64})@([a-z\d]+)\.([a-z]{2,3})(\.[a-z]{2,3})?$/m';
-        $passwordPattern = '/^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s])([^\s]){8,20}$/m';
-         echo print_r($_POST);
-        $email = $_POST["email"];
-        $password = $_POST["password"];
-     
-        if (isset($_POST["submit"])) {
-            if (!preg_match($emailPattern, $email)) {
-               echo "email is wrong";
-            } elseif (!preg_match($passwordPattern, $password)) {
-               echo "password is wrong";
-            } else {
-             echo "login successful";
-            }
-        }
+if (isset($_POST['submit'])) {
+    $emailPattern = '/^([a-z\d\.-]{1,64})@([a-z\d]+)\.([a-z]{2,3})(\.[a-z]{2,3})?$/m';
+    $passwordPattern = '/^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s])([^\s]){8,20}$/m';
+    //  echo print_r($_POST);
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+    if (!preg_match($emailPattern, $email)) {
+        echo "email is wrong";
+    } elseif (!preg_match($passwordPattern, $password)) {
+        echo "password is wrong";
+    } else {
+        echo "login successful";
     }
+}
 ?>
