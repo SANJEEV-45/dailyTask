@@ -1,38 +1,29 @@
 <?php declare(strict_types=1);
     class Car{
-        public string $model;
+        static int $count = 10;
+        protected string $model;
         public string $brand;
-        public int $cylinder;
-        public int $rpm;
+        private int $rpm;
         
-        function __construct(string $model, string $brand, int $cylinder, int $rpm)
+        public function __construct(string $model, string $brand, int $rpm)
         {
             $this->model = $model;
             $this->brand = $brand;
-            $this->cylinder = $cylinder;
             $this->rpm = $rpm;
         }
-        function carspeed():void {
-            echo "{$this->model} runs at {$this->rpm}";
-        }  
-        function getCarname():string{
-            return "{$this->brand} {$this->model}";
+        
+        public function getRpm() : int{
+            return $this->rpm;
+        }
+        
+        protected function intro() : string{
+            return "this is from parent class";
         }
     }
 
-    class Volkswagen {
-        public string $torque;
-        public function __construct (int $torque)
-       {
-           parent::getCarname(); 
-           $this->torque = $torque;
-       }
-    }
-    $myCar = new Car("A6","Audi",4,6500);
-    echo $myCar->model;
-    echo "<br>";
-    echo "{$myCar->getCarname()}";
-    echo"<br>";
+//     $people = array("Peter", "Joe", "Glenn", "Cleveland");
 
-
+//     echo current($people) . "<br>";
+//     echo end($people) . "<br>";
+//    echo next($people);
 ?>
