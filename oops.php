@@ -1,4 +1,7 @@
 <?php
+const EDITION2 = 7;
+echo Book::EDITION;
+exit();
 class Book
 {
     //Acess modifiers

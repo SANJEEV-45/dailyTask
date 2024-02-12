@@ -1,5 +1,5 @@
 <?php declare(strict_types=1);
-require "inheritance.php";
+// require "inheritance.php";
 
 // class SUV extends Car {
 //         public static int $torque;
@@ -36,8 +36,12 @@ require "inheritance.php";
        public function myName(){
           return "Hi this is from member trait";
        }
-
     }
 
-
+    trait Member2{
+      public int $number=8;
+      public function myName(){
+         return "Hi this is from member trait2";
+      }
+   }
 ?>
