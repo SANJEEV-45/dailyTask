@@ -57,8 +57,8 @@
                          <option value="user">user</option>
                          <option value="admin">admin</option>
                        </select>&nbsp;&nbsp;
-                   </form><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <?php echo $row["role"]?>
+                   </form><br>
+                    <?php echo "Current role : ".$row["role"]?>
                 </td>
                 <td><?php echo $row["status"]?></td>
                 <td><a href="deleteUser.php?id=<?php echo $row["id"]?>" id="delete">Delete</a></td>

@@ -1,0 +1,329 @@
+*{
+    margin:0%;
+    padding:0%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+html{
+   scroll-behavior: smooth;
+}
+.roboto-thin-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+ }
+
+#overview{
+    background: url(/CSS/showcase.jpeg);
+    position: relative;
+    min-height: 100vh;
+    z-index: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: antiquewhite;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#overview .content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:2.5rem;
+    width:90%;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: -5rem;
+}
+#overview .content .overview_con
+{
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+#music{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(46, 41, 41);
+    color: antiquewhite;
+
+}
+#music .music-content{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width:80%;
+    gap: 2.5rem;
+    font-size: 1.5rem;
+    margin-top: 4rem;
+}
+#music #music-btn{
+    padding:1.5rem 3rem;
+    background-color: brown;
+    border:none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#music #music-btn:hover{
+    background-color: aliceblue;
+    color: black;
+    transition: 1s;
+}
+#music #music-btn:not(:hover){
+    transition: 1s;
+}
+#music .music_con2{
+    font-size: 15px;
+}
+.mobile img{
+    height:100%;
+    width:100%;
+}
+#movie
+{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+#movie .movie-content{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:4rem;
+    width: 80%;
+    text-align: center;
+    font-size: 1.5rem;
+    
+
+}
+#movie .movie_con{
+   font-weight: 100;
+    font-size: 1.5rem;  
+    line-height: 2rem;
+    letter-spacing: 1px;  
+}
+#movie #movie-btn{
+    padding: 1rem 2.5rem;
+    border:none;
+    border-radius:5px;
+    background-color: darkblue;
+    color: antiquewhite;
+    margin-top: 2rem;
+}
+#movie #movie-btn:hover{
+    background-color: brown;
+    color: black;
+    transition: 1s;
+}
+#movie #movie-btn:not(:hover){
+    transition: 1s;
+}
+#movie .movie-screen img{
+    height: 100%;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+#entertainment{
+    background:url(/CSS/section-bg.jpeg);
+    background-position:bottom;
+    background-repeat: no-repeat;
+    min-height: 70vh;
+    color:white; 
+    display: flex;
+    justify-content: center;
+}
+#entertainment .enter-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:80%;
+    text-align: center;
+    gap: 3rem;
+    margin-top: -3rem;
+}
+#entertainment .enter_con{
+    font-size: 20px;
+    line-height: 2rem;
+    letter-spacing: 1px;  
+}
+#Gift-card{
+    min-height: 60vh;
+    width:80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: arial;
+    margin-left: 7rem;
+}
+#Gift-card .gift-content{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+}
+#Gift-card .card img{
+    height: 100%;
+    width:100%;
+}
+#Gift-card .gift-content .gift-inner-con{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:2rem;
+}
+#Gift-card .gift-content .gift-inner-con h3{
+    font-size: 1.5rem;
+}
+#Gift-card .gift-content .gift-inner-con .inner-con2{
+   letter-spacing: 0.5px;
+}
+#Gift-card .gift-content .gift-inner-con #redeem{
+    text-decoration: none;
+    margin-top: -1.5rem;
+}
+#footer{
+    min-height: 40vh;
+    background-color: rgb(46, 41, 41);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+}
+#footer .footer-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap:10rem;
+
+}
+#footer .footer-box .box{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+}
+#footer .footer-box .box ul li{
+    list-style: none;
+}
+#footer .footer-box .box ul{
+    line-height: 1.5rem;
+}
+#footer .footer-box .box ul li a{
+    text-transform: none;
+    text-decoration: none;
+    color: white;
+}
+body .menu-btn{
+    position:static;
+}
+.sidebar{
+    z-index: 2;
+    background-color: white;
+    width: 300px;
+    border: solid black 1px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    overflow-y: auto;
+    transition: 0.6s ease;
+    transition-property:left;
+    left: -300px;
+}
+.active{
+    left: 0;
+}
+#overview .profile-section {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.911);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    color: #f0f0f0;
+}
+#overview .profile-section .profile {
+    height: 60px;
+    width: 60px;
+    overflow: hidden;
+}
+#overview .profile-section .profile img{
+    height:100%;
+    width:100%;
+}
+#overview .profile-section header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:0.5rem;
+    margin-top: 1rem;
+}
+.sidebar #close-icon{
+    position: absolute;
+    top: 0%;
+    right:0%;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.menu-btn #menu-icon{
+    font-size: 2rem;
+    cursor: pointer;
+}
+.sidebar .menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.sidebar .menu a{
+    text-decoration: none;
+    text-align: center;
+    padding:2rem;
+    font-size: 1.1rem;
+}
+.sidebar .menu a:hover{
+   background-color: black;
+   color: white;
+   transition: 0.5s ease;
+}
+.sidebar .menu a:not(:hover){
+  transition: 0.5s;
+}
+#submit{
+    padding:10px 20px;
+    text-align: center;
+    border: none;
+    border-radius: 7px;
+    color: aliceblue;
+    background-color: rgb(0, 103, 172);
+    cursor: pointer;
+    width: 100px; 
+}
+#submit:hover{
+    background-color: antiquewhite;
+    transition: 0.7s;
+    color: black;
+}
+#submit:not(:hover){
+    transition: 1s;
+}

@@ -33,6 +33,7 @@
             </thead>
            <tbody>
              <?php
+             
                $query = "SELECT * FROM users";
 
                $result = $connection->query($query);

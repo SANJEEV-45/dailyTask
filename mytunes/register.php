@@ -1,6 +1,5 @@
 <?php
 include("connection.php");
-
 if (isset($_POST["login"])) {
   sleep(1);
   header("Location: loginUI.php");
@@ -15,28 +14,25 @@ if (isset($_POST["submit"])) {
     }
     //extractiing the informations through form using post method
     $Email = $_POST["Email"];
-    $passWord = $_POST["password"];
+    $passWord1 = $_POST["password"];
     $phone = $_POST["Phone"];
     $city = $_POST["City"];
     $gender = $_POST["gender"];
 
     //letting the users to valoid email and strong password
     $emailPattern = '/^([a-z\d\.-]{1,64})@([a-z\d]+)\.([a-z]{2,3})(\.[a-z]{2,3})?$/m';
-    $passwordPattern = '/^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s])([^\s]){8,20}$/m';
 
     if (!preg_match($emailPattern, $Email)) {
         header("location: registerUI.php?err_email=1");
         exit(); //Restricting to store the invalid email in the database
-    } elseif (!preg_match($passwordPattern, $passWord)) {
-        header("location: registerUI.php?err_pass=2");
-        exit(); //Restricting to store the weak password in the database
-    } elseif(!strlen($phone)==10){
+    } 
+     elseif(!strlen($phone)==10){
         header("location: registerUI.php?err_no=3");
         exit(); //Restricting to store the invalid phone number in the database
     }
-
+    $encodedPassword = convert_uuencode($passWord1);
     //storing the values into the db
-    $query = "INSERT INTO users (email, password, phone, city, gender ) VALUES ('$Email', '$passWord','$phone','$city','$gender')";
+    $query = "INSERT INTO users (email, password, phone, city, gender ) VALUES ('$Email', '$encodedPassword','$phone','$city','$gender')";
     
 
 
