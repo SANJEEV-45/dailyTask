@@ -1,0 +1,118 @@
+@import url("menubar.css");
+@import url("profileIcon.css");
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(/CSS/ai-generated-7926621_960_720.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    position: relative;
+}
+.profileIcon .profile-section
+{
+    position: relative;
+    right:0%;
+}
+
+.profileIcon .profile-section header{
+    color:rgb(255, 255, 255);
+}
+.menu-btn #menu-icon
+{
+    color:white;
+}
+#box
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:15px;
+}
+#innerbox{
+    border:solid black 2px;
+    border-radius: 20px;
+    max-width:400px;
+    padding:50px 30px;
+    background-color: rgba(58, 54, 54, 0.5);
+}
+#registerform
+{
+    color: antiquewhite;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+#login{
+    padding: 5px 15px;
+    text-align: center;
+    border: none;
+    border-radius: 7px;
+    color: black;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    width: 270px; 
+}
+#login:hover{
+    background-color: black;
+    transition: 0.7s;
+    color: white;
+}
+#login:not(:hover){
+    transition: 1s;
+}
+
+#button{
+    padding: 5px 15px;
+    text-align: center;
+    border: none;
+    border-radius: 7px;
+    color: aliceblue;
+    background-color: rgb(8, 96, 230);
+    cursor: pointer;
+    width: 270px; 
+}
+#button:hover{
+    background-color: antiquewhite;
+    transition: 0.7s;
+    color: black;
+}
+#button:not(:hover){
+    transition: 1s;
+}
+
+#Male, #Female{
+   cursor: pointer;
+}
+label {
+    margin-bottom: 5px; /* Add spacing between labels and inputs */
+}
+  
+#Email,#Phone,#City{
+    margin-bottom: 20px; /* Add spacing between inputs */
+    width: 200px; /* Set input width */
+    margin-left: 20px;
+    border-radius: 5px;
+    height: 25px;
+}
+#password{
+    margin-bottom: 20px; /* Add spacing between inputs */
+    width: 190px; /* Set input width */
+    margin-left: 3px;
+    border-radius: 5px;
+    height: 25px;
+}
+img{
+    height:100px;
+    width:100px;
+    position: relative;
+    margin-bottom: -40px;
+}

@@ -1,0 +1,67 @@
+@import url("menubar.css");
+@import url("profileIcon.css");
+
+*{
+    margin:0%;
+    padding:0%;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior:smooth;
+}
+body{
+    background:url("/CSS/abstract-white-shapes-background_79603-1359.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    min-height: 100vh;
+}
+
+tr,th,td{
+    padding:20px;
+}
+#tablebox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 1;
+}
+
+#adduser{
+    padding:10px 20px;
+    text-align: center;
+    border: none;
+    border-radius: 7px;
+    color: aliceblue;
+    background-color: rgb(204, 4, 31);
+    cursor: pointer;
+    width: 100px; 
+}
+#adduser:hover{
+    background-color: antiquewhite;
+    transition: 0.7s;
+    color: black;
+}
+#adduser:not(:hover){
+    transition: 1s;
+}
+
+table{
+    backdrop-filter: blur(20px);
+}
+tbody #delete{
+    color:white;
+    padding:3px 6px;
+    border-radius: 3px;
+    background-color: rgb(66, 61, 61);
+}
+.profileIcon .profile-section{
+    position:relative;
+    top: 0%;
+}
