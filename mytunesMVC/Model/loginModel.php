@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "./dbConfig.php";
+require_once($_SERVER['DOCUMENT_ROOT']."/mytunesMVC/dbConfig.php");
 
 class LoginUser
 {

@@ -9,7 +9,7 @@ require_once("../Controller/logoutController.php");
       </div>
       <h2>Hi&nbsp;<?php echo $_SESSION["info"]["email"]?></h2>
       <h4 align="center"><?php echo $_SESSION["info"]["role"]?></h4>
-      <form action="../Controller/logoutController" method="POST">
+      <form action="../Controller/./logoutController" method="POST">
          <input type="submit" id="submit" name="logout" value="Logout">
       </form>        
    </header>

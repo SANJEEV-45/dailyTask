@@ -65,7 +65,7 @@
     </section>
 
     <!-- GiftCards -->
-    <?php if(($_SESSION["info"]["role"]=="admin") || ($_SESSION["info"]["role"]=="admin")) {?>
+    <?php if(($_SESSION["info"]["role"]!="user")){?>
     <section id="Gift-card">
        <div class="gift-content">
           <figure class="card">

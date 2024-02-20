@@ -10,9 +10,12 @@ require_once("../Controller/registerController.php");
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
-  <link href="/CSS/register.css" rel="stylesheet" type="text/css">
+  <link href="./siteDesigning/register.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
 <body>
+  <h2><i class="fas fa-music"></i> &nbsp;mytunes</h2> 
   <div id="box">
      <!-- <?php
         if (isset($_GET['err_email']) && $_GET["err_email"] == "1") {

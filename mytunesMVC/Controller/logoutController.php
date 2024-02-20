@@ -4,7 +4,7 @@
         session_start();
         session_unset();
         session_destroy();    
-        header("Location: ./loginView.php");
+        header("Location:../View/loginView.php");
     }
   }
   $logout = new LogoutController();

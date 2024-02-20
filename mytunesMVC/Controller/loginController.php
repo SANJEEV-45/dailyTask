@@ -20,7 +20,7 @@ $login = new LoginController();
 //Allowing the user to entering the welcome page if he has sucessfully logged in
 if(isset($_POST["submit"])){
 
-    //Getting the crendentials from the user
+    //Getting the credentials from the user
     $username = $_POST["username"];
     $password = $_POST["password"];
 

@@ -1,5 +1,5 @@
 <?php 
-include("../dbConfig.php");
+require_once($_SERVER['DOCUMENT_ROOT']."/mytunesMVC/dbConfig.php");
 class RegisterUser{
 
     function addUser($Email,$encodedPassword,$phone,$city,$gender):bool{
