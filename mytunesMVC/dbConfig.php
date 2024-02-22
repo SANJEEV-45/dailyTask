@@ -2,7 +2,7 @@
  $username = "root";
  $localhost = "localhost";
  $passkey = "admin@123";
- $database = "learning";
+ $database = "RBAC";
  
  //Creating the connection to connect the database
  $connection = mysqli_connect($localhost, $username, $passkey, $database);

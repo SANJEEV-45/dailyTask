@@ -200,6 +200,7 @@ html{
     text-decoration: none;
     margin-top: -1.5rem;
 }
+
 #footer{
     min-height: 40vh;
     background-color: rgb(46, 41, 41);
@@ -233,4 +234,11 @@ html{
     text-transform: none;
     text-decoration: none;
     color: white;
+}
+#footertext{
+    z-index: 3;
+    padding: 6rem;
+    height: 140vh;
+    background-color: brown;
+    text-align: center;
 }

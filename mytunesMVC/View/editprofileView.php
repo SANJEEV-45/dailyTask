@@ -27,6 +27,9 @@ $result1 = $editprofile->getDetails($id);
         } else if (isset($_GET['err_no']) && $_GET["err_no"] == "3") {
             echo "<p style = 'color:red;'>Invalid phone number</p>";
         } 
+        else if (isset($_GET['err_no']) && $_GET["err_no"] == "3") {
+          echo "<p style = 'color:red;'>Invalid phone number</p>";
+      }
       ?>
     <div id="innerbox2">
       <figure>

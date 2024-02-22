@@ -11,6 +11,7 @@
     transition-property:left;
     left: -300px;
 }
+
  .active{
     left: 0;
 }

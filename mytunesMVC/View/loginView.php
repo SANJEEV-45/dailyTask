@@ -52,7 +52,7 @@
           <label for="password">Password</label>
          <input type="password" name="password" placeholder="Password" id="password"  autocomplete="off"/><br><br>
          <button type="submit" name="submit" id="button">Login</button><br><br>
-         <a href="./registerView.php" id="signin">Sign up</a>
+         <a href="./registerView" id="signin">Sign up</a>
        </form>
      </div>
     </div> 

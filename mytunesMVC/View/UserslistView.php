@@ -1,5 +1,5 @@
 <?php
-session_start();
+require_once($_SERVER['DOCUMENT_ROOT']."/mytunesMVC/Controller/UserslistController.php");
 require_once($_SERVER['DOCUMENT_ROOT']."/mytunesMVC/dbConfig.php");
 if (!isset($_SESSION["info"]["role"])) {
     header("Location:loginUI.php");
@@ -28,11 +28,6 @@ if (!isset($_SESSION["info"]["role"])) {
    <div class="profileIcon">
       <?php require_once "profileIcon.php";?>
    </div>
-   <script>
-      function submit() {
-         document.getElementById("changeRole").submit();
-      }
-    </script>
    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
    <div id="tablebox">
     <?php if (isset($_GET['success']) && $_GET["success"] == "1") {
@@ -46,35 +41,30 @@ if (!isset($_SESSION["info"]["role"])) {
             </thead>
          <?php }?>
          <tbody>
-            <?php if (($_SESSION["info"]["role"]) == "admin") {?>
-               <form action="addByuserUI" method="POST">
-                 <input type="submit" id="adduser" name="adduser" value="Add user">
+            <?php if(($_SESSION["info"]["role"]) == "admin") {?>
+               <form action = "./addByuserView" method = "post">
+                   <input type="submit" id="adduser" value="Add user">
                </form>
                <h3>Search</h3>
                <form action="" method="post" id="searchuser">
-               <select name="filter" id="filter">
-                    <option>none</option>
-                    <option value="id">Id</option>
-                    <option value="email">Username</option>
-                    <option value="city">City</option>
-                   <option value="phone">Phone</option>
-                </select>
+                   <select name="filter" id="filter">
+                      <option>none</option>
+                      <option value="id">Id</option>
+                      <option value="email">Username</option>
+                      <option value="city">City</option>
+                     <option value="phone">Phone</option>
+                   </select>
                  <input type="text" name="query" required>
                  <input type="submit" name="search" id="adduser" value="Search">
-            </form>
-
-            <?php if (isset($_POST["search"])) {
-    if (isset($_POST['query']) && isset($_POST['filter'])) {
-        $query = $_POST['query'];
-        $filter = $_POST['filter'];
-        $sql = "SELECT * FROM users WHERE $filter = '$query' AND role!='admin'";
-        $result1 = $connection->query($sql);
-        if (($result1->num_rows > 0)) {?>
+               </form>
+            <?php if(isset($_POST["search"])){
+                $result1 = $read->filterUsersForAdmin($_POST["query"],$_POST["filter"]);
+               if (($result1->num_rows > 0)) {?>
                           <tr>
                               <th>S.No</th>
                               <th>Username</th>
                               <th>Phone no</th>
-                              <th>City</td>
+                              <th>City</th>
                               <th>Gender</th>
                               <th>Role</th>
                               <th>Status</th>
@@ -89,8 +79,8 @@ if (!isset($_SESSION["info"]["role"])) {
                                <td><?php echo $row1["city"] ?></td>
                                <td><?php echo $row1["gender"] ?></td>
                                <td><?php $id = $row1["id"]?>
-                               <form method="post" id="changeRole" action="../Controller/UserslistController.php?id=<?php echo $id ?>">
-                                  <select name="Role" id="Role" onchange="submit()">
+                               <form method="post" id="changeRole" action="../Controller/UserslistController?id=<?php echo $id ?>">
+                                  <select name="role" id="Role" onchange="submit()">
                                     <option>none</option>
                                     <option value="user">user</option>
                                     <option value="manager">manager</option>
@@ -108,16 +98,12 @@ if (!isset($_SESSION["info"]["role"])) {
                         <td colspan="9" align="center"><?php echo "No users found" ?></td>
                      </tr>
                      <?php }?>
-                     <?php
-}
-    $connection->close();
-}
-    ?>
-               <form action="" method="POST">
-                 <input type="submit" name="showAll" value="Show All" id="adduser">
-               </form>
-               <?php require_once("./showAllList.php");?>
-            <?php }?>
+                     <?php }?>
+               <?php if(!isset($_POST["search"])){ 
+                    require_once("./showAllList.php");
+                     $connection->close();}?>
+               <?php }?>
+
             
 
             <?php
@@ -135,18 +121,14 @@ if ($_SESSION["info"]["role"]=="manager") {?>
                  <input type="submit" name="search" id="adduser" value="Search">
              </form>
 
-            <?php if (isset($_POST["search"])) {
-       if (isset($_POST['query']) && isset($_POST['filter'])) {
-        $query = $_POST['query'];
-        $filter = $_POST['filter'];
-        $sql = "SELECT * FROM users WHERE $filter = '$query' AND role = 'user'";
-        $result1 = $connection->query($sql);
-        if (($result1->num_rows > 0)) {?>
+            <?php if (isset($_POST["search"])){
+             $result1 = $read->filterUsersForManager($_POST["query"],$_POST["filter"]);
+               if (($result1->num_rows > 0)) {?>
                           <tr>
                               <th>S.No</th>
                               <th>Username</th>
                               <th>Phone no</th>
-                              <th>City</td>
+                              <th>City</th>
                               <th>Gender</th>
                               <th>Role</th>
                               <th>Status</th>
@@ -171,15 +153,11 @@ if ($_SESSION["info"]["role"]=="manager") {?>
                         <td colspan="9" align="center"><?php echo "No users found" ?></td>
                      </tr>
                      <?php }?>
-                     <?php
-}
-    $connection->close();
-}?>
-               <form action="" method="POST">
-                 <input type="submit" name="showAll" value="Show All" id="adduser">
-               </form>
-              <?php require_once "./showListforMan.php";?>
-            <?php }?>
+                     <?php }?>
+             <?php if(!isset($_POST["search"])){ 
+                    require_once("./showListforMan.php");
+                     $connection->close();}?>
+               <?php }?>
          </tbody>
          </table>
 
@@ -191,7 +169,7 @@ if ($_SESSION["info"]["role"]=="manager") {?>
                      <th>id</th>
                      <th>Username</th>
                      <th>Phone no</th>
-                     <th>City</td>
+                     <th>City</th>
                      <th>Gender</th>
                      <th>Role</th>
                      <th>Status</th>
@@ -227,5 +205,10 @@ $connection->close();
 }
 ?>
   </div>
+  <script>
+      function submit() {
+         document.getElementById("changeRole").submit();
+      }
+    </script>
 </body>
 </html>

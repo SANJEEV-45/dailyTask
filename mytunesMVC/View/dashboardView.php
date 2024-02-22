@@ -47,7 +47,7 @@
     <!-- Movie -->
     <section id="movie">
         <div class="movie-content">
-            <h2>The movie and TV collection you always wished for. Granted.<h2>
+            <h2>The movie and TV collection you always wished for. Granted.</h2>
             <p class="movie_con">With over 100,000 movies and TV shows to choose from, there is always something great to watch on myTunes and if you watch on Orange TV 4K, you will be able to enjoy a tremendous selection of your favorite content in 4K HDR. So get ready to enjoy episodes of your favorite TV shows or hit movies you have been waiting to see — anytime, anywhere. Just tap to play, or even download if you are going somewhere you wonld not have Wi-Fi.</p>
             <button value="Read more" id="movie-btn">Read more</button>
             <figure class="movie-screen">
@@ -133,6 +133,9 @@
         </div>
     </section>
   <?php  }?>
+    <section id="footertext">
+         <h3 align="center">Copyright &copy; 2024 Orange myTunes</h3>
+    </section>
     <script src="./siteFunctioning/dashboard.js"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>

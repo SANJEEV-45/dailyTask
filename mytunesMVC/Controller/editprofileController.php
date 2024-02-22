@@ -18,7 +18,7 @@ class EditController{
     public function checkUpdated($result)
     {
        if($result){
-        header("location:UsersList.php?success=1");
+        header("location:../editprofileView.php?success=1");
        }
        else{
         echo "Error occured";
