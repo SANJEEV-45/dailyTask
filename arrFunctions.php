@@ -47,13 +47,13 @@
 // and starts from 0 */
 
 // //4. array_combine(keys,values) returns assoc array
-// $fname = array("Peter" => 35, "Ben" => 23, "Joe" => 63);
-// $funame = array("Peter" => 77, "Ben" => 29, "Joe" => 43);
-// $age = array("35", "37", null => 34);
-// print_r(array_merge($fname, $funame));
-// echo "<br>";
-// /* The passing arrays should have equal number of parameters orelse it will
-// throw error and we can pass the null iin anyone of the array. */
+$fname = array("Peter" => 35, "Ben" => 23, "Joe" => 63);
+$funame = array("Peter" => 77, "Ben" => 29, "Joe" => 43);
+$age = array("35", "37", null => 34);
+print_r(array_merge($fname, $funame));
+echo "<br>";
+/* The passing arrays should have equal number of parameters orelse it will
+throw error and we can pass the null in anyone of the array. */
 
 // //5. array_count_values(array)
 // $arr_3 = array("Apple", "Mango", "Pear", "Grapes", "apple", "Pear", " ", "");
