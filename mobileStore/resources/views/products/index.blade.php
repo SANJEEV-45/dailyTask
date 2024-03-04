@@ -6,7 +6,7 @@
         <a href="products/insertProduct" class="btn btn-primary"><i class="bi bi-plus-circle"></i> New Product</a>
     </div>
     <div class="col-md-12 table-responsive mt-3">
-        <table class="table table-bordered">
+        <table class="table table-bordered ">
             <tr>
                 <th>S.No</th>
                 <th>Image</th>
@@ -16,39 +16,19 @@
                 <th>Action</th>
             </tr>
             <tbody>
+                @foreach ($products as $product)
                 <tr>
-                    <td>1</td>
-                    <td><img src="shopping.jpeg" alt="image"></td>
-                    <td><a href="viewproduct.html">Samsung</a></td>
-                    <td>Rs. 25000</td>
-                    <td>Rs. 22000</td>
+                    <td>{{$loop->iteration}}</td>
+                    <td><img src="products/{{$product->image}}" alt="image"></td>
+                    <td><a href="products/{{$product->id}}/viewProduct">{{$product->name}}</a></td>
+                    <td>{{$product->MRP}}</td>
+                    <td>{{$product->price}}</td>
                     <td>
-                        <a href="/editProduct.html" class="btn btn-dark"><i class="bi bi-pencil-square"></i></a>
-                        <a href="#" class="btn btn-danger"><i class="bi bi-trash"></i></a>
+                        <a href="products/{{$product->id}}/editProduct" class="btn btn-dark"><i class="bi bi-pencil-square"></i></a>
+                        <a href="products/{{$product->id}}/deleteProduct" onclick="return confirm('Are you sure you want to Delete?')" class="btn btn-danger"><i class="bi bi-trash"></i></a>
                     </td>
                 </tr>
-                <tr>
-                    <td>2</td>
-                    <td><img src="shopping.jpeg" alt="image"></td>
-                    <td>Samsung</td>
-                    <td>Rs. 25000</td>
-                    <td>Rs. 22000</td>
-                    <td>
-                        <a href="#" class="btn btn-dark"><i class="bi bi-pencil-square"></i></a>
-                        <a href="#" class="btn btn-danger"><i class="bi bi-trash"></i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td><img src="shopping.webp" alt="image"></td>
-                    <td>Samsung</td>
-                    <td>Rs. 25000</td>
-                    <td>Rs. 22000</td>
-                    <td>
-                        <a href="#" class="btn btn-dark"><i class="bi bi-pencil-square"></i></a>
-                        <a href="#" class="btn btn-danger"><i class="bi bi-trash"></i></a>
-                    </td>
-                </tr>
+                @endforeach
             </tbody>
         </table>
 
