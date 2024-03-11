@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link href="./css/register.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+  <div class="logo">
+     <img src="./images/logo.png" alt="" id="logo">
+     <h2>HitCart</h2>
+  </div>
+  <div id="box">
+    <div id="innerbox2">
+      <figure>
+        <img src="./images/pngwing.com.png" alt="">
+      </figure>
+    </div>
+    <div id="innerbox">
+      <form action="" method="POST" id="registerform">
+        <label for="Email">Email</label>
+        <input type="text" name="Email" placeholder="Email" id="Email" autocomplete="off" required /><br><br>
+        <label for="Phone">Phone</label>
+        <input type="tel" name="Phone" placeholder="Phone" id="Phone" autocomplete="off" required/><br><br>
+        <label for="City"> City</label>&nbsp;&nbsp;&nbsp;
+        <select name="City" id="City" required>
+          <option value="select">select</option>
+          <option value="Chennai">Chennai</option>
+          <option value="Trichy">Trichy</option>
+          <option value="Madurai">Madurai</option>
+          <option value="Tirunelveli">Tirunelveli</option>
+          <option value="Coimbatore">Coimbatore</option>
+        </select><br><br>
+        Gender &nbsp; <input type="radio" id="male" name="gender" value="male" autocomplete="off" required >
+        <label for="male" id="Male">Male</label>&nbsp
+         &nbsp;<input type="radio" id="female" name="gender" value="female" autocomplete="off">
+        <label for="female" id="Female">Female</label><br><br>
+        <label for="Email">Password</label>
+        <input type="password" name="password" placeholder="Password" id="password" autocomplete="off" required/><br><br>
+        <button type="submit" name="registerSubmit" id="button">Register</button><br><br>
+        <a href="#" id="login">Login</a>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

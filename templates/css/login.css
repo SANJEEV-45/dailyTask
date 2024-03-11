@@ -1,0 +1,112 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body{
+    background-image: url("/images/login-bg\(1\).png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+body h2{
+    color:rgb(0, 183, 255)
+}
+.logo{
+    display:flex;
+    flex-direction: row;
+    gap:0.5rem;
+
+}
+.logo img{
+    height:2rem;
+    width:2rem;
+}
+#box
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:15px;
+}
+#innerbox{
+    border:solid black 2px;
+    border-radius: 20px;
+    max-width:400px;
+    padding:50px 30px;
+    background-color: rgba(58, 54, 54, 0.5);
+    
+}
+#loginpage
+{
+    color: antiquewhite;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#button{
+    padding: 10px 7.6rem;
+    text-align: center;
+    border: none;
+    border-radius: 7px;
+    color: aliceblue;
+    background-color: rgb(223, 92, 60);
+    cursor: pointer; 
+}
+#button:hover{
+    background-color: antiquewhite;
+    transition: 0.7s;
+    color: black;
+}
+#button:not(:hover){
+    transition: 1s;
+}
+#signin{
+    text-decoration: none;
+    padding: 10px 7rem;
+    text-align: center;
+    border: none;
+    border-radius: 7px;
+    color: aliceblue;
+    background-color: rgb(8, 96, 230);
+    cursor: pointer;
+ 
+}
+#signin:hover{
+    background-color: antiquewhite;
+    transition: 0.7s;
+    color: black;
+}
+#signin:not(:hover){
+    transition: 1s;
+}
+label {
+    margin-bottom: 5px; /* Add spacing between labels and inputs */
+}
+  
+#username{
+    margin-bottom: 20px; /* Add spacing between inputs */
+    width: 200px; /* Set input width */
+    margin-left: 10px;
+    border-radius: 5px;
+    height: 25px;
+}
+#password{
+    margin-bottom: 20px; /* Add spacing between inputs */
+    width: 200px; /* Set input width */
+    margin-left: 15px;
+    border-radius: 5px;
+    height: 25px;
+}
+img{
+    height:100px;
+    width:100px;
+    position: relative;
+    margin-bottom: -40px;
+}
