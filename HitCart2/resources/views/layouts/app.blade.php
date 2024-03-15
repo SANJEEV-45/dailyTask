@@ -17,6 +17,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="{{ asset('css/app.css') }}" />
+    <style>
+        .dropdown-submenu{
+            margin-top: -2.5rem;
+        }
+    </style>
 </head>
 
 <body>
@@ -43,11 +48,20 @@
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Laptop</a></li>
                         <li><a class="dropdown-item" href="#">Accessories</a></li>
-                        <li><a class="dropdown-item dropdown" data-mdb-toggle="dropdown" href="#">Clothes</a>
+                        <li><a class="dropdown-item dropdown" data-mdb-toggle="dropdown" href="#">Men</a>
                             <ul class="dropdown-menu dropdown-submenu">
                                 <li><a href="#" class="dropdown-item">Shirts</a></li>
                                 <li><a href="#" class="dropdown-item">Pants</a></li>
+                                <li><a href="{{route('product.category',['category_id'=>6])}}" class="dropdown-item">Hoodies</a></li>
+                                <li><a href="{{route('product.category',['category_id'=>4])}}" class="dropdown-item">Shoes</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item dropdown" data-mdb-toggle="dropdown" href="#">Women</a>
+                            <ul class="dropdown-menu dropdown-submenu">
+                                <li><a href="#" class="dropdown-item">kurtis</a></li>
+                                <li><a href="#" class="dropdown-item">Pants</a></li>
                                 <li><a href="{{route('product.category',['category_id'=>6])}}" class="dropdown-item">Frocks</a></li>
+                                <li><a href="#" class="dropdown-item">Shoes</a></li>
                             </ul>
                         </li>
                         <li><a class="dropdown-item" href="#">Toys</a></li>
@@ -95,6 +109,7 @@
     </nav>
     @yield('main')
     @yield('categoryView')
+    @yield('productView')
     <!-- navbar -->
     <!-- footer -->
     <footer id="footer" style="margin-top: 50px;">

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\UserModel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Session;
 use Symfony\Component\HttpFoundation\Session\Session as SessionSession;
 
@@ -55,16 +56,27 @@ class AuthController extends Controller
       $user = $request->except('_token');
       $email = $user['username'];
       $password = $user['password'];
-
+      
       $result = $this->model->verifyUser($email);
 
+      $check = $request->only('email','password');
       if(!$result){
         return back()->with('fail','Please register ur details first');
       }
       else{
-          if(convert_uudecode($result['password']) == $password){
-            $request->session()->put('user_info',$result);
-            return redirect()->route('dashboard')->with('success','Happy Shopping');
+        if(Auth::guard('web')->attempt($check)){
+          //if(convert_uudecode($result['password']) == $password){
+            // $sessionId = uniqid();
+            // $name = substr($result['email'],0,strpos($result['email'],'@'));
+            // UserSessions::create([
+            //     'id'=>$sessionId,
+            //     'name'=>$name,
+            //     'role'=>$result['role'],
+            // ]);
+
+            // $request->session()->put('role',$result['role']);
+            //$request->session()->put('user_info',$result);
+            return redirect()->intended('/dashboard')->with('success','Happy Shopping');
         }
         else{
           return back()->with('fail','Incorrect password or Username');

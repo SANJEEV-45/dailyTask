@@ -45,7 +45,6 @@
 }
 
 .dropdown-menu .dropdown-submenu {
-    top: 35%;
     left: 100%;
 }
 
@@ -551,7 +550,8 @@
   /* footer */
   
   .card-img-top{
-    height: 70%; 
+    height: 65%; 
+    
  }
 
   html{

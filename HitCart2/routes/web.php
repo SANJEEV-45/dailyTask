@@ -41,7 +41,8 @@ Route::post('/loggingIn',[AuthController::class,'validation'])->name("login-vali
 
 Route::middleware('Auth-check')->group(function(){
     Route::view('/dashboard','products.index')->name('dashboard');
-    Route::get('/product/{category_id}',[ProductController::class,'menu'])->name('product.category');
+    Route::get('/category/{category_id}',[ProductController::class,'menu'])->name('product.category');
+    Route::get('/product/{product_id}',[ProductController::class,'view'])->name('product.view');
 });
 
-Route::view('/welcome','welcome');
+Route::view('/welcome','welcome')->name('welcome');

@@ -18,6 +18,12 @@ class ProductController extends Controller
         if($data){
             return view('products.categoryView',['data'=>$data]);
         }
-       
+    }
+    
+    public function view($product_id){
+        $data = $this->model->productbyId($product_id);
+        if($data){
+            return view('products.productView',['data'=>$data]);
+        }
     }
 }
