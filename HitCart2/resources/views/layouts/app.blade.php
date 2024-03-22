@@ -52,7 +52,7 @@
                             <ul class="dropdown-menu dropdown-submenu">
                                 <li><a href="#" class="dropdown-item">Shirts</a></li>
                                 <li><a href="#" class="dropdown-item">Pants</a></li>
-                                <li><a href="{{route('product.category',['category_id'=>6])}}" class="dropdown-item">Hoodies</a></li>
+                                <li><a href="#" class="dropdown-item">Hoodies</a></li>
                                 <li><a href="{{route('product.category',['category_id'=>4])}}" class="dropdown-item">Shoes</a></li>
                             </ul>
                         </li>
